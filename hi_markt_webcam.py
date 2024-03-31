@@ -10,7 +10,7 @@ i_pause_in_seconds = 60
 
 print(Back.RED + Fore.BLACK + '---{ STARTING DOWNLOAD }---' + Style.RESET_ALL + "\n\n")
 
-while(True):
+while True:
     # generate time stamp YYYY-MM-DD_hhmmss
     s_timestamp = time.strftime("%Y-%m-%d_%H%M%S")
     # assemble filename 
