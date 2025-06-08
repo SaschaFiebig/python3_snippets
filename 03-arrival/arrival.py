@@ -53,7 +53,7 @@ def extract_time(f_time_in_seconds):
         century:    2_903_040_000
         decade:       290_304_000
         year:          29_030_400 
-        month:          2_419_200
+        *month:          2_419_200  # remove month because to inconsistent
         week:             604_800
         day:               86_400
         hour:               3_600
@@ -68,6 +68,9 @@ def extract_time(f_time_in_seconds):
         #f_time_in_seconds =   # second to week 
         #f_time_in_seconds = 90_061  # second to day 
         #f_time_in_seconds =   3_661  # second to hour
+
+    # TODO: remove all references to month 
+    # base all calculations on seconds a day or seconds a year 
 
     # calculate leftovers
     f_millenia = f_time_in_seconds / 60 / 60 / 24 / 7 / 4 / 12 / 10 / 10 / 10
@@ -86,7 +89,7 @@ def extract_time(f_time_in_seconds):
         "i_centuries": int(f_centuries),
         "i_decades": int(f_decades),
         "i_years": int(f_years),
-        "i_months": int(f_months),
+#         "i_months": int(f_months),
         "i_weeks": int(f_weeks),
         "i_days": int(f_days),
         "i_hours": int(f_hours),
@@ -140,7 +143,7 @@ print(f"\nEstimated arrival in {d_result['i_millenia']} millenia.")
 print(f"Estimated arrival in {d_result['i_centuries']} centuries.")
 print(f"Estimated arrival in {d_result['i_decades']} decades.")
 print(f"Estimated arrival in {d_result['i_years']} years.")
-print(f"Estimated arrival in {d_result['i_months']} months.")
+# print(f"Estimated arrival in {d_result['i_months']} months.")
 print(f"Estimated arrival in {d_result['i_weeks']} weeks.")
 print(f"Estimated arrival in {d_result['i_days']} days.")
 print(f"Estimated arrival in {d_result['i_hours']} hours.")
